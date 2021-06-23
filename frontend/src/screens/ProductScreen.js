@@ -10,7 +10,7 @@ import {listProductDetails} from '../actions/productActions'
 
 const ProductScreen = ({history , match}) => {
 
-    const [qty , setQty] = useState(0)
+    const [qty , setQty] = useState(1) 
    
    const dispatch = useDispatch()
 
@@ -30,7 +30,7 @@ const ProductScreen = ({history , match}) => {
            <Link className='btn btn-dark my-3' to='/' >
              Go Back
            </Link>
-           {loading ? <Loader/> : error ? <Message variant='danger'/> : 
+           {loading ? <Loader/> : error ? <Message variant='danger'>{error}</Message> : 
            <Row>
                <Col md={6} >
                  <Image src={product.image} alt={product.name} fluid />
@@ -108,5 +108,7 @@ const ProductScreen = ({history , match}) => {
         </>
     )
 }
+
+
 
 export default ProductScreen
