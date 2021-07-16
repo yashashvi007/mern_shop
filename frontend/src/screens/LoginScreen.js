@@ -1,6 +1,6 @@
 import React , {useState , useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import {Form , Button , Row , Col} from 'react-bootstrap'
+import {Form , Button , Row , Col, FormControl} from 'react-bootstrap'
 import {useDispatch , useSelector} from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
@@ -18,7 +18,6 @@ const LoginScreen = ({location , history }) => {
     const { loading , error , userInfo  } = userLogin
      
 
-    const [subs , setSubs] = useState()
     const redirect = location.search ? location.search.split('=')[1] : '/'
 
     useEffect(()=>{
@@ -47,7 +46,7 @@ const LoginScreen = ({location , history }) => {
            </Form.Group> 
            <Form.Group controlId='password' >
               <Form.Label>Password</Form.Label>
-              <Form.Control type='passwprd' placeholder='Enter Password' value ={password} 
+              <Form.Control type='password' placeholder='Enter Password' value ={password} 
                  onChange={(e)=> setPassword(e.target.value) }
                >
 
@@ -70,3 +69,5 @@ const LoginScreen = ({location , history }) => {
 }
 
 export default LoginScreen
+
+

@@ -36,3 +36,4 @@ Rating.propTypes = {
 }
 
 export default Rating
+
