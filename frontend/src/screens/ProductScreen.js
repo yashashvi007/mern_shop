@@ -110,4 +110,3 @@ const ProductScreen = ({history , match}) => {
 }
 
 export default ProductScreen
-

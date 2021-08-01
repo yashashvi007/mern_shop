@@ -27,7 +27,7 @@ const CartScreen = ({match , location , history}) => {
     }
 
     const checkOutHandler = ()=>{
-        console.log('checkOut')
+        history.push('/login?redirect=shipping')
     }
 
     return (
@@ -102,7 +102,5 @@ const CartScreen = ({match , location , history}) => {
         </Row>
     )
 }
-
-
 
 export default CartScreen
